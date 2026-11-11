@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Mask Tattoo Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- LANG SWITCH -->
+  <button id="lang-toggle" class="lang-btn" onclick="toggleLang()">
+    <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="English" />
+  </button>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="logo.png" alt="Black Mask Tattoo Studio" class="hero-logo" />
+    <div class="social-btns">
+    <a href="https://www.instagram.com/black_mask_tattoo_studio?psln=eW54cnEwOWp2bzVi&utm_source=qr" target="_blank" class="ig-icon-btn" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4.5"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+    <a href="https://share.google/LETheKksF7EKMfonx" target="_blank" class="ig-icon-btn" aria-label="Google">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </svg>
+    </a>
+    <a href="https://gr.pinterest.com/BlackMask_TattooStudio/" target="_blank" class="ig-icon-btn" aria-label="Pinterest">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+      </svg>
+    </a>
+    <a href="https://www.tiktok.com/@black_mask_tattoo?_r=1&_t=ZN-9BJYiBdQQpK" target="_blank" class="ig-icon-btn" aria-label="TikTok">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/306981647973" target="_blank" class="ig-icon-btn" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+    </div>
+  </section>
+
+  <!-- ARTISTS -->
+  <section class="artists">
+    <h2 id="gallery-title">Οι Καλλιτέχνες μας</h2>
+    <div class="artists-grid">
+      <a href="https://www.instagram.com/kostis.laza?vrfl=MTRwb21pZDR0cTdwbQ%3D%3D&utm_source=qr" target="_blank" class="artist-card">
+        <img src="artist-kostis.jpg" alt="Κωστής Λαζαρίδης" class="artist-photo" />
+      </a>
+      <a href="https://www.instagram.com/john_jave?cplk=ZGc0NTI5bXBxbXJu" target="_blank" class="artist-card">
+        <img src="artist-giannis.jpg" alt="Γιάννης Γκαζάκης" class="artist-photo" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2 id="about-title">Ποιοι Είμαστε</h2>
+    <p id="about-text">Το <strong>Black Mask Tattoo Studio</strong> στην Περαία Θεσσαλονίκης αποτελεί έναν σύγχρονο, καλαίσθητο και πεντακάθαρο χώρο αφιερωμένο στην τέχνη του τατουάζ. Στελεχώνεται από έμπειρους καλλιτέχνες, όπως οι <a href="https://www.instagram.com/kostis.laza?vrfl=MTRwb21pZDR0cTdwbQ%3D%3D&utm_source=qr" target="_blank" class="artist-link">Κωστής Λαζαρίδης</a> και <a href="https://www.instagram.com/john_jave?cplk=ZGc0NTI5bXBxbXJu" target="_blank" class="artist-link">Γιάννης Γκαζάκης</a>, που προσφέρουν εξατομικευμένη προσέγγιση σε κάθε σχέδιο — από το πρώτο σκίτσο μέχρι το τελικό αποτέλεσμα.</p>
+    <a href="https://share.google/LETheKksF7EKMfonx" target="_blank" class="reviews-badge about-reviews">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="google-icon">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </svg>
+      <div class="reviews-right">
+        <div class="reviews-stars">★★★★★</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- INFO + REVIEWS -->
+  <section class="info-section">
+    <div class="info-left">
+      <div class="contact-info">
+        <p><span id="phone-label">Τηλέφωνο</span><a href="tel:+306981647973">+30 698 164 7973</a></p>
+        <p><span id="address-label">Διεύθυνση</span><a id="address-text" href="https://maps.google.com/?q=Αμπελοκήπων+21,+Περαία+570+19" target="_blank">Αμπελοκήπων 21, 1ος Όροφος, Περαία 570 19</a></p>
+        <div class="hours-block">
+          <span class="hours-label" id="hours-label">Ώρες</span>
+          <div class="hours-grid">
+            <span id="day-mon">Δευτέρα</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-tue">Τρίτη</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-wed">Τετάρτη</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-thu">Πέμπτη</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-fri">Παρασκευή</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-sat">Σάββατο</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+            <span id="day-sun">Κυριακή</span><span class="hour-time">9:00 π.μ.–9:00 μ.μ.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© Black Mask Tattoo Studio</span>
+  </footer>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #111;
+  --red:   #cc0000;
+  --white: #fff;
+  --dim:   #888;
+  --line:  #e0e0e0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ── LANG SWITCH ── */
+#lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 200;
+}
+
+.lang-btn {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.5;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.lang-btn img {
+  width: 32px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+.lang-btn:hover { opacity: 0.8; }
+.lang-btn.active { opacity: 1; border-color: var(--black); }
+
+/* ── HERO ── */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-logo {
+  width: clamp(220px, 36vw, 480px);
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+.social-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.ig-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #111;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.ig-icon-btn:hover {
+  color: var(--red);
+  transform: scale(1.1);
+}
+
+.ig-icon-btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dim);
+  z-index: 1;
+}
+
+/* ── REVIEWS ── */
+.reviews {
+  border-top: 1px solid var(--line);
+  padding: 60px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 18px 36px;
+  border-radius: 50px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  text-decoration: none;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.reviews-badge:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,0.13);
+  transform: translateY(-2px);
+}
+
+.google-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.reviews-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reviews-right .reviews-stars {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #f4b400;
+}
+
+.reviews-right .reviews-score {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.reviews-stars {
+  font-size: 1.8rem;
+  color: #f4b400;
+  letter-spacing: 4px;
+}
+
+.reviews-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviews-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  color: var(--black);
+  letter-spacing: 2px;
+}
+
+.reviews-count {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.reviews-btn {
+  border: 1px solid var(--line);
+  padding: 12px 28px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.reviews-btn:hover {
+  border-color: var(--black);
+  color: var(--red);
+}
+
+/* ── ABOUT ── */
+.about {
+  padding: 100px 48px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.about h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+  color: var(--black);
+}
+
+.artist-link {
+  font-weight: 600;
+  font-style: normal;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.artist-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.about p strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+
+.about p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: #444;
+  font-weight: 300;
+  font-style: italic;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-reviews {
+  margin-top: 36px;
+  display: inline-flex;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.about-reviews .google-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.about-reviews .reviews-stars {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .about { padding: 60px 24px; }
+}
+
+/* ── GALLERY ── */
+.gallery {
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.gallery h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  margin-bottom: 40px;
+  color: var(--black);
+}
+
+.gallery-sub {
+  font-size: 0.85rem;
+  color: var(--dim);
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+}
+
+.ig-btn {
+  display: inline-block;
+  border: 1px solid var(--dim);
+  color: var(--white);
+  padding: 14px 40px;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.ig-btn:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+/* ── ARTISTS ── */
+.artists {
+  padding: 100px 48px;
+  position: relative;
+  background: url('about-bg.jpg') center center / cover no-repeat;
+}
+
+.artists::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.artists > * {
+  position: relative;
+  z-index: 1;
+}
+
+.artists-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.artists h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  margin-bottom: 48px;
+  color: #fff;
+  text-align: center;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.artist-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.artist-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-photo.placeholder {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--line);
+}
+
+.artist-name {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .artists { padding: 70px 24px; }
+}
+
+.artist-ig {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color 0.2s;
+}
+
+.artist-card:hover .artist-ig {
+  color: var(--red);
+}
+
+@media (max-width: 600px) {
+  .artists-grid { grid-template-columns: 1fr; }
+  .artists { padding: 70px 24px; }
+}
+
+/* ── CONTACT ── */
+.contact {
+  padding: 100px 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.contact h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  margin-bottom: 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  gap: 4px;
+}
+
+.contact-info p span {
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--black);
+}
+
+.hours-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hours-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px 24px;
+}
+
+.hours-grid span {
+  font-size: 0.85rem;
+  color: var(--black);
+}
+
+.hours-grid span:nth-child(odd) {
+  color: var(--dim);
+}
+
+.contact-info p a { color: var(--black); transition: color 0.2s; }
+.contact-info p a:hover { color: var(--red); }
+
+.ig-link {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-top: 8px;
+  transition: color 0.2s;
+}
+
+.ig-link:hover { color: var(--red); }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  color: var(--black);
+  padding: 14px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  outline: none;
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+form input::placeholder,
+form textarea::placeholder { color: #bbb; }
+
+form input:focus,
+form textarea:focus { border-bottom-color: var(--red); }
+
+form textarea { resize: none; min-height: 120px; }
+
+form button {
+  margin-top: 16px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover { background: #e00; }
+
+/* ── INFO SECTION ── */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.info-right {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .info-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span,
+footer a {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+footer a:hover { color: var(--white); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .gallery { padding: 70px 24px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact { padding: 70px 24px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
