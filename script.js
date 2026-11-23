@@ -73,8 +73,8 @@ const i18nEl = {};
 const i18nEn = {
   artist_kostis_bio: 'A distinction graduate of the School of Fine Arts at Aristotle University of Thessaloniki with a master’s degree in Printmaking, he specialises in the art of tattooing with 6+ years of experience.',
   artist_giannis_bio: 'A graduate of the certified “Dermatostixia – Body Tattooing” training programme at KDVM2 DELTA Thessaloniki, he specialises in the art of tattooing with 8+ years of experience.',
-  styles_title: 'Tattoo Styles',
-  styles_intro: 'Every tattoo is designed from scratch for you. These are the styles we specialise in:',
+  styles_title: 'Choose Your Style',
+  styles_intro: 'Choose the style that suits you and we will bring your idea to its best version, with a custom design.',
   style_fineline: 'Thin, clean lines for subtle, elegant designs.',
   style_lettering: 'Names, dates and quotes in lettering designed for you.',
   style_minimal: 'Simple, small designs with a clean result.',
