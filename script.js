@@ -95,5 +95,9 @@ const i18nEn = {
   faq_q5: 'Can you design my own tattoo?',
   faq_a5: 'Yes. We can create a design from scratch for you or adapt a design you already like, depending on what you want.',
   faq_q6: 'What do I do after my tattoo?',
-  faq_a6: 'After every session we give you aftercare instructions for proper healing and we are here for anything you need.'
+  faq_a6: 'After every session we give you aftercare instructions for proper healing and we are here for anything you need.',
+  faq_q7: 'What hygiene standards do you follow?',
+  faq_a7: 'We follow strict hygiene standards with sterilised equipment in every session.',
+  faq_q8: 'Do you speak English?',
+  faq_a8: 'Yes. We speak Greek and English and welcome many clients visiting Thessaloniki from abroad.'
 };
