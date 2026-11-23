@@ -22,7 +22,7 @@ const translations = {
     address_label: 'Διεύθυνση',
     address_text: 'Αμπελοκήπων 21, 1ος Όροφος, Περαία 570 19',
     hours_label: 'Ώρες',
-    hour_time: '9:00 π.μ.–9:00 μ.μ.',
+    hour_time: '09:00–21:00',
     mon: 'Δευτέρα', tue: 'Τρίτη', wed: 'Τετάρτη',
     thu: 'Πέμπτη', fri: 'Παρασκευή', sat: 'Σάββατο', sun: 'Κυριακή',
   },
@@ -34,7 +34,7 @@ const translations = {
     address_label: 'Address',
     address_text: '21 Ampelokypon St., 1st Floor, Peraia 570 19',
     hours_label: 'Hours',
-    hour_time: '9:00 AM–9:00 PM',
+    hour_time: '09:00–21:00',
     mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday',
     thu: 'Thursday', fri: 'Friday', sat: 'Saturday', sun: 'Sunday',
   }
