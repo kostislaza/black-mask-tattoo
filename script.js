@@ -91,7 +91,7 @@ const i18nEn = {
   faq_q4: 'Where is the studio?',
   faq_a4: '21 Ampelokipon St., 1st floor, Peraia, Thessaloniki 570 19. We welcome clients from Peraia, Nea Epivates, Agia Triada, Kalamaria, Thermi and all of Thessaloniki.',
   faq_q5: 'Can you design my own tattoo?',
-  faq_a5: 'Yes. Every design is created from scratch for you, based on your idea and the placement you want.',
+  faq_a5: 'Yes. We can create a design from scratch for you or adapt a design you already like, depending on what you want.',
   faq_q6: 'What do I do after my tattoo?',
   faq_a6: 'After every session we give you aftercare instructions for proper healing and we are here for anything you need.'
 };
