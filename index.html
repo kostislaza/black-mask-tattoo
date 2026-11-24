@@ -82,7 +82,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -91,6 +91,18 @@
   <button id="lang-toggle" class="lang-btn" onclick="toggleLang()">
     <img id="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="English" />
   </button>
+
+  <!-- MENU -->
+  <button id="menu-toggle" class="menu-btn" aria-label="Μενού" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="site-menu" class="site-menu" aria-hidden="true">
+    <a href="#about" onclick="closeMenu()" data-i18n="nav_about">Behind the Mask</a>
+    <a href="#artists" onclick="closeMenu()" data-i18n="nav_artists">Οι Καλλιτέχνες μας</a>
+    <a href="#styles" onclick="closeMenu()" data-i18n="nav_styles">Choose Your Style</a>
+    <a href="#faq" onclick="closeMenu()" data-i18n="nav_faq">Συχνές Ερωτήσεις</a>
+    <a href="#contact" onclick="closeMenu()" data-i18n="nav_contact">Επικοινωνία</a>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -129,12 +141,15 @@
       </svg>
     </a>
     </div>
+    <a href="#about" class="hero-arrow" aria-label="Δες περισσότερα">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section class="about" id="about">
     <h2 id="about-title">Behind the Mask</h2>
-    <p id="about-text">Πίσω από τη μάσκα βρίσκονται καλλιτέχνες με εξειδίκευση στην τέχνη του τατουάζ, που αγαπούν αυτό που κάνουν. Το <strong>Black Mask Tattoo Studio</strong> στην Περαία Θεσσαλονίκης, με 5★ από 150+ κριτικές στη Google, ξεχωρίζει για τον επαγγελματισμό, την άψογη καθαριότητα και την προσοχή στη λεπτομέρεια. Σε βοηθάμε να βρεις το σχέδιο που σου ταιριάζει και το δουλεύουμε μαζί σου από το πρώτο σκίτσο μέχρι το τελικό αποτέλεσμα, σε ένα φιλικό και άνετο περιβάλλον. Αν είσαι λάτρης του τατουάζ, σε προσκαλούμε να ζήσεις την απόλυτη εμπειρία.</p>
+    <p id="about-text">Πίσω από τη μάσκα βρίσκονται καλλιτέχνες με πιστοποιημένη κατάρτιση και πολυετή εμπειρία στην τέχνη του τατουάζ. Το <strong>Black Mask Tattoo Studio</strong> στην Περαία Θεσσαλονίκης, με 5★ από 150+ κριτικές στη Google, ξεχωρίζει για τον επαγγελματισμό, την άψογη καθαριότητα και την προσοχή στη λεπτομέρεια. Σε βοηθάμε να βρεις το σχέδιο που σου ταιριάζει και το δουλεύουμε μαζί σου από το πρώτο σκίτσο μέχρι το τελικό αποτέλεσμα, σε ένα φιλικό και άνετο περιβάλλον. Αν είσαι λάτρης του τατουάζ, σε προσκαλούμε να ζήσεις την απόλυτη εμπειρία.</p>
     <a href="https://share.google/LETheKksF7EKMfonx" target="_blank" class="reviews-badge about-reviews">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="google-icon">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -149,7 +164,7 @@
   </section>
 
   <!-- ARTISTS -->
-  <section class="artists">
+  <section class="artists" id="artists">
     <h2 id="gallery-title">Οι Καλλιτέχνες μας</h2>
     <div class="artists-grid">
       <div class="artist-card">
@@ -201,7 +216,7 @@
   </section>
 
   <!-- INFO + REVIEWS -->
-  <section class="info-section">
+  <section class="info-section" id="contact">
     <div class="info-left">
       <div class="contact-info">
         <p><span id="phone-label">Τηλέφωνο</span><a href="tel:+306981647973">+30 698 164 7973</a></p>
@@ -227,6 +242,6 @@
     <span>© Black Mask Tattoo Studio · Αμπελοκήπων 21, Περαία Θεσσαλονίκης 570 19</span>
   </footer>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

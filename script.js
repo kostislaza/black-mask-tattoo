@@ -16,7 +16,7 @@ function toggleLang() {
 const translations = {
   el: {
     about_title: 'Behind the Mask',
-    about_text: 'Πίσω από τη μάσκα βρίσκονται καλλιτέχνες με εξειδίκευση στην τέχνη του τατουάζ, που αγαπούν αυτό που κάνουν. Το <strong>Black Mask Tattoo Studio</strong> στην Περαία Θεσσαλονίκης, με 5★ από 150+ κριτικές στη Google, ξεχωρίζει για τον επαγγελματισμό, την άψογη καθαριότητα και την προσοχή στη λεπτομέρεια. Σε βοηθάμε να βρεις το σχέδιο που σου ταιριάζει και το δουλεύουμε μαζί σου από το πρώτο σκίτσο μέχρι το τελικό αποτέλεσμα, σε ένα φιλικό και άνετο περιβάλλον. Αν είσαι λάτρης του τατουάζ, σε προσκαλούμε να ζήσεις την απόλυτη εμπειρία.',
+    about_text: 'Πίσω από τη μάσκα βρίσκονται καλλιτέχνες με πιστοποιημένη κατάρτιση και πολυετή εμπειρία στην τέχνη του τατουάζ. Το <strong>Black Mask Tattoo Studio</strong> στην Περαία Θεσσαλονίκης, με 5★ από 150+ κριτικές στη Google, ξεχωρίζει για τον επαγγελματισμό, την άψογη καθαριότητα και την προσοχή στη λεπτομέρεια. Σε βοηθάμε να βρεις το σχέδιο που σου ταιριάζει και το δουλεύουμε μαζί σου από το πρώτο σκίτσο μέχρι το τελικό αποτέλεσμα, σε ένα φιλικό και άνετο περιβάλλον. Αν είσαι λάτρης του τατουάζ, σε προσκαλούμε να ζήσεις την απόλυτη εμπειρία.',
     gallery_title: 'Οι Καλλιτέχνες μας',
     phone_label: 'Τηλέφωνο',
     address_label: 'Διεύθυνση',
@@ -28,7 +28,7 @@ const translations = {
   },
   en: {
     about_title: 'Behind the Mask',
-    about_text: 'Behind the mask are artists specialised in the art of tattooing who love what they do. <strong>Black Mask Tattoo Studio</strong> in Peraia, Thessaloniki, rated 5★ from 150+ Google reviews, stands out for its professionalism, impeccable cleanliness and attention to detail. We help you find the design that suits you and work on it with you from the first sketch to the final result, in a friendly and relaxed setting. If you love tattoos, we invite you to live the ultimate tattoo experience.',
+    about_text: 'Behind the mask are artists with certified training and years of experience in the art of tattooing. <strong>Black Mask Tattoo Studio</strong> in Peraia, Thessaloniki, rated 5★ from 150+ Google reviews, stands out for its professionalism, impeccable cleanliness and attention to detail. We help you find the design that suits you and work on it with you from the first sketch to the final result, in a friendly and relaxed setting. If you love tattoos, we invite you to live the ultimate tattoo experience.',
     gallery_title: 'Our Artists',
     phone_label: 'Phone',
     address_label: 'Address',
@@ -71,6 +71,11 @@ function applyLang(lang) {
 // Greek texts are read from the page itself; English versions below.
 const i18nEl = {};
 const i18nEn = {
+  nav_about: 'Behind the Mask',
+  nav_artists: 'Our Artists',
+  nav_styles: 'Choose Your Style',
+  nav_faq: 'FAQ',
+  nav_contact: 'Contact',
   artist_kostis_bio: 'A distinction graduate of the School of Fine Arts at Aristotle University of Thessaloniki with a master’s degree in Printmaking, he specialises in the art of tattooing with 6+ years of experience.',
   artist_giannis_bio: 'A graduate of the certified “Dermatostixia – Body Tattooing” training programme at KDVM2 DELTA Thessaloniki, he specialises in the art of tattooing with 8+ years of experience.',
   styles_title: 'Choose Your Style',
@@ -101,3 +106,13 @@ const i18nEn = {
   faq_q8: 'Do you speak English?',
   faq_a8: 'Yes. We speak Greek and English and welcome many clients visiting Thessaloniki from abroad.'
 };
+
+function toggleMenu() {
+  const open = !get('site-menu').classList.contains('open');
+  get('site-menu').classList.toggle('open', open);
+  get('menu-toggle').classList.toggle('open', open);
+  get('menu-toggle').setAttribute('aria-expanded', open);
+  get('site-menu').setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+function closeMenu() { if (get('site-menu').classList.contains('open')) toggleMenu(); }
