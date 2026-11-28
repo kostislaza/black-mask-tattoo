@@ -104,7 +104,11 @@ const i18nEn = {
   faq_q7: 'What hygiene standards do you follow?',
   faq_a7: 'We follow strict hygiene standards with sterilised equipment in every session.',
   faq_q8: 'Do you speak English?',
-  faq_a8: 'Yes. We speak Greek and English and welcome many clients visiting Thessaloniki from abroad.'
+  faq_a8: 'Yes. We speak Greek and English and welcome many clients visiting Thessaloniki from abroad.',
+  bar_call: 'Call',
+  consent_text: 'We use Google cookies to measure how many people find us through our ads.',
+  consent_no: 'No',
+  consent_yes: 'Accept'
 };
 
 function toggleMenu() {
